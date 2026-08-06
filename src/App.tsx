@@ -87,21 +87,21 @@ export default function DiagramaTrianguloInteractvo() {
       }}
     >
       <div 
-        className={`flex flex-col items-center justify-center w-full max-w-[1800px] h-full px-4 lg:px-8 transition-all duration-700 ease-in-out pt-6 pb-6 ${pantallaCompleta ? 'opacity-0 scale-95 pointer-events-none absolute' : 'opacity-100 scale-100'}`}
+        className={`flex flex-col items-center justify-center w-full max-w-[1800px] h-full px-4 lg:px-8 transition-all duration-700 ease-in-out pt-2 pb-4 lg:pt-6 lg:pb-6 ${pantallaCompleta ? 'opacity-0 scale-95 pointer-events-none absolute' : 'opacity-100 scale-100'}`}
       >
         
-        {/* TÍTULO PRINCIPAL */}
-        <h1 className="text-3xl lg:text-5xl font-bold text-center text-black mb-6 lg:mb-12 tracking-wide flex-shrink-0" style={{ fontFamily: 'Times New Roman, serif' }}>
+        {/* TÍTULO PRINCIPAL (Ajustado para móvil: text-2xl y mb-2) */}
+        <h1 className="text-2xl lg:text-5xl font-bold text-center text-black mb-2 lg:mb-12 tracking-wide flex-shrink-0" style={{ fontFamily: 'Times New Roman, serif' }}>
           Esquema del Marco teórico
         </h1>
 
         <div className="flex flex-col items-center justify-center w-full flex-grow">
           
-          {/* DIAGRAMA TRIANGULAR (Más grande y proporcionado) */}
+          {/* DIAGRAMA TRIANGULAR (Más centrado) */}
           <div className="w-full flex items-center justify-center relative flex-grow">
             <svg 
               viewBox="0 0 1000 800" 
-              className="w-full max-w-[95vw] lg:max-w-[1200px] max-h-[75vh] lg:max-h-[85vh] drop-shadow-md overflow-visible"
+              className="w-full max-w-[95vw] lg:max-w-[1200px] max-h-[65vh] lg:max-h-[85vh] drop-shadow-md overflow-visible"
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
