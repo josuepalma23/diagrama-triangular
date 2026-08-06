@@ -90,15 +90,15 @@ export default function DiagramaTrianguloInteractvo() {
         className={`flex flex-col items-center justify-center w-full max-w-[1800px] h-full px-4 lg:px-8 transition-all duration-700 ease-in-out pt-2 pb-4 lg:pt-6 lg:pb-6 ${pantallaCompleta ? 'opacity-0 scale-95 pointer-events-none absolute' : 'opacity-100 scale-100'}`}
       >
         
-        {/* TÍTULO PRINCIPAL (Ajustado para móvil: text-2xl y mb-2) */}
+        {/* TÍTULO PRINCIPAL */}
         <h1 className="text-2xl lg:text-5xl font-bold text-center text-black mb-2 lg:mb-12 tracking-wide flex-shrink-0" style={{ fontFamily: 'Times New Roman, serif' }}>
           Esquema del Marco teórico
         </h1>
 
         <div className="flex flex-col items-center justify-center w-full flex-grow">
           
-          {/* DIAGRAMA TRIANGULAR (Más centrado) */}
-          <div className="w-full flex items-center justify-center relative flex-grow">
+          {/* DIAGRAMA TRIANGULAR (Margen negativo en móvil [-mt-16] para acercarlo al título) */}
+          <div className="w-full flex items-center justify-center relative flex-grow -mt-16 lg:mt-0">
             <svg 
               viewBox="0 0 1000 800" 
               className="w-full max-w-[95vw] lg:max-w-[1200px] max-h-[65vh] lg:max-h-[85vh] drop-shadow-md overflow-visible"
@@ -128,7 +128,7 @@ export default function DiagramaTrianguloInteractvo() {
                 onClick={(e) => { e.stopPropagation(); handleClick('modernidad'); }}
               >
                  <circle cx="500" cy="150" r="40" fill={datosEstructura.modernidad.color} stroke="black" strokeWidth="3" />
-                 {/* Texto Arriba (Times New Roman forzado) */}
+                 {/* Texto Arriba */}
                  <text x="500" y="80" textAnchor="middle" fontSize="36" fill="black" fontWeight="normal" fontFamily="Times New Roman, serif">Modernidad</text>
                  {/* Indicador + */}
                  <text x="500" y="158" textAnchor="middle" fontSize="24" fontWeight="bold" fill="black">+</text>
@@ -140,7 +140,7 @@ export default function DiagramaTrianguloInteractvo() {
                 onClick={(e) => { e.stopPropagation(); handleClick('tecnica'); }}
               >
                  <circle cx="150" cy="700" r="40" fill={datosEstructura.tecnica.color} stroke="black" strokeWidth="3" />
-                 {/* Texto Izquierda (Times New Roman forzado) */}
+                 {/* Texto Izquierda */}
                  <text x="90" y="710" textAnchor="end" fontSize="36" fill="black" fontWeight="normal" fontFamily="Times New Roman, serif">Técnica</text>
                  {/* Indicador + */}
                  <text x="150" y="708" textAnchor="middle" fontSize="24" fontWeight="bold" fill="black">+</text>
@@ -152,13 +152,13 @@ export default function DiagramaTrianguloInteractvo() {
                 onClick={(e) => { e.stopPropagation(); handleClick('cosmos'); }}
               >
                  <circle cx="850" cy="700" r="40" fill={datosEstructura.cosmos.color} stroke="black" strokeWidth="3" />
-                 {/* Texto Derecha (Times New Roman forzado) */}
+                 {/* Texto Derecha */}
                  <text x="910" y="710" textAnchor="start" fontSize="36" fill="black" fontWeight="normal" fontFamily="Times New Roman, serif">Cosmos</text>
                  {/* Indicador + */}
                  <text x="850" y="708" textAnchor="middle" fontSize="24" fontWeight="bold" fill="black">+</text>
               </g>
 
-              {/* Texto Central (Times New Roman forzado) */}
+              {/* Texto Central */}
               <g>
                  <text x="500" y="450" textAnchor="middle" fontSize="32" fill="black" fontFamily="Times New Roman, serif">Teoría política de las</text>
                  <text x="500" y="495" textAnchor="middle" fontSize="32" fill="black" fontFamily="Times New Roman, serif">tecnodiversidades</text>
